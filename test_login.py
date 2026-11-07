@@ -22,7 +22,7 @@ def test_login_page_is_displayed(page: Page):
 # Задание 3. Успешная авторизация
 def test_successful_login(page: Page):
     login(page, "standard_user", "secret_sauce")
-    expect(page).to_have_url("https://www.saucedemo.com/inventory.html")
+    expect(page).to_have_url("https://www.saucedemo.com/incorrect.html")
     expect(page.locator('[data-test="inventory-container"]')).to_be_visible()
 
 
